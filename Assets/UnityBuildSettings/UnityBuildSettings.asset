@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3725629524455719144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0f7a04940394844a505e73c3eb8cec, type: 3}
+  m_Name: ZipFileOperation
+  m_EditorClassIdentifier: 
+  actionType: 0
+  actionName: ZipFileOperation
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: $BUILDPATH
+  outputPath: $BUILDPATH
+  outputFileName: $PRODUCT_NAME-$RELEASE_TYPE-$YEAR_$MONTH_$DAY.zip
+--- !u!114 &-662010430471321852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d88f7d353534a4fbdeb11196057db7, type: 3}
+  m_Name: UploadItch
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: UploadItch
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  pathToButlerExe: /Users/dkse/Library/Application Support/itch/apps/butler/butler
+  nameOfItchUser: zabzuro
+  nameOfItchGame: The Last Scholar
+  useGeneratedBuildVersion: 1
+  showUploadProgress: 0
+  itchChannelOverride: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5886119a5c7b34d8872ab527ca3e1b, type: 3}
+  m_Name: UnityBuildSettings
+  m_EditorClassIdentifier: 
+  _basicSettings:
+    baseBuildFolder: Build
+    buildPath: $YEAR-$MONTH-$DAY/$VERSION/$RELEASE_TYPE/$PLATFORM/
+    openFolderPostBuild: 1
+  _productParameters:
+    buildCounter: 1
+    lastGeneratedVersion: 1.0.2258.254
+    version: 1.0.$DAYSSINCE("January 1, 2015").$SECONDS
+    autoGenerate: 1
+  _releaseTypeList:
+    releaseTypes:
+    - typeName: Release
+      bundleIndentifier: 
+      companyName: Dead Decoy
+      productName: The Last Scholar
+      developmentBuild: 0
+      allowDebugging: 0
+      enableHeadlessMode: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: 2cda990e2423bbf4892e6590ba056729
+  _platformList:
+    platforms:
+    - enabled: 1
+      distributionList:
+        distributions: []
+      architectures:
+      - target: 20
+        name: WebGL
+        enabled: 1
+      variants: []
+      platformName: WebGL
+      binaryNameFormat: '{0}'
+      dataDirNameFormat: '{0}_Data'
+      targetGroup: 13
+  _projectConfigurations:
+    configSet:
+      _Buckets: ffffffff0100000002000000
+      _HashCodes: 6d38f6476da5e2352d6dfd48
+      _Next: ffffffffffffffff00000000
+      _Count: 3
+      _Version: 3
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - Release/WebGL/WebGL
+      - Release/WebGL
+      - Release
+      _Values:
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/WebGL/WebGL
+      - enabled: 1
+        childKeys:
+        - Release/WebGL
+    showViewOptions: 0
+    showConfigs: 0
+    showBuildInfo: 0
+    hideDisabled: 0
+    treeView: 0
+    selectedKeyChain: 
+  _preBuildActions:
+    buildActions: []
+  _postBuildActions:
+    buildActions:
+    - {fileID: -3725629524455719144}
+    - {fileID: -662010430471321852}
